@@ -1,3 +1,6 @@
 *.crt
 *.env
 *.key
+*.sum
+.vscode/
+go.sum
