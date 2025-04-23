@@ -4,3 +4,4 @@
 *.sum
 .vscode/
 go.sum
+.gitignore
