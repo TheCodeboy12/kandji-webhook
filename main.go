@@ -23,23 +23,6 @@ var (
 	kandjiApiBaseUrl = os.Getenv("KANDJI_API_URL")
 )
 
-type KandjiListAdeDeviceRes struct {
-	Count    int               `json:"count"`
-	Next     string            `json:"next"`
-	Previous string            `json:"previous"`
-	Results  []kandjiAdeDevice `json:"results"`
-}
-type depAccount struct {
-	Id         string `json:"id"`
-	ServerName string `json:"server_name"`
-}
-type kandjiAdeDevice struct {
-	SerialNumber string     `json:"serial_number"`
-	Dep_account  depAccount `json:"dep_account"`
-	BlueprintId  string     `json:"blueprint_id"`
-	Id           string     `json:"id"`
-}
-
 // For demonstration only. Do not hardcode or commit actual webhook secrets.
 var webhookIDsToSecrets = map[string]server.Secret{
 	webhookId: server.Secret{
